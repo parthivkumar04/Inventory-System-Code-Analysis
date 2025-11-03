@@ -8,16 +8,16 @@ To enhance Python code quality, security, and style by utilizing static analysis
 
 | Issue | Tool/Type | Line(s) (Original) | Description | Fix Approach |
 | :--- | :--- | :--- | :--- | :--- |
-| **I. Critical issues ** | | | | |
+| **I. Critical issues** | | | | |
 | **Insecure use of `eval`** | Bandit (B307) / Pylint (W0123) | 59 | Use of the possibly insecure `eval()` function, which executes arbitrary code. | Removed the line entirely. |
 | **Mutable default arg** | Pylint (W0102) | 8 | Dangerous default value `logs=[]` is shared across all function calls. | Changed the default to `None` and initialized the list conditionally. |
 | **Bare `except`** | Pylint (W0702) / Bandit (B110) / Flake8 (E722) | 19 | Using a bare `except:` clause catches all exceptions, masking critical errors. | Replaced with specific exception: `except KeyError:`. |
 | **Untyped Input** | Runtime Error | 51 | The `addItem` call with `"ten"` caused a `TypeError` due to lack of validation. | Added `isinstance` check for `qty` to validate input type. |
-| ** Resource management / ideal practices ** | | | | |
+| **Resource management / ideal practices** | | | | |
 | **Resource Leaks** | Pylint (R1732) | 26, 32 | Opening files without the `with` statement, risking file handles not being closed reliably. | Implemented the **`with open(...) as f:`** context manager. |
 | **Unspecified Encoding** | Pylint (W1514) | 26, 32 | Using `open` without explicitly specifying `encoding`. | Explicitly set **`encoding='utf-8'`** in all `open` calls. |
 | **Global Statement** | Pylint (W0603) | 27 | Using the `global` statement makes data flow confusing. | **Refactored entire script** into an `InventorySystem` class, eliminating the need for `global`. |
-| ** Readability ** | | | | |
+| ** Readability** | | | | |
 | **Non-snake_Case Name** | Pylint (C0103) | 8, 14, 22, 25, 31, 36, 41, 48 | Function names do not conform to PEP 8's `snake_case`. | Renamed all functions and methods to use `snake_case`. |
 | **Missing Docstrings** | Pylint (C0114, C0116) | 1, 8, 14, 22, 25, 31, 36, 41, 48 | Missing module docstring (line 1) and all 8 function docstrings. | Added concise docstrings to the module, class, and every method. |
 | **Unused Import** | Pylint (W0611) / Flake8 (F401) | 2 | The `logging` module was imported but never used. | Removed the line `import logging`. |
