@@ -1,8 +1,8 @@
 # Lab 5 >>> Inventory System Static Code Analysis Report
 
-Name : N PARTHIV KUMAR
-SRN : PES1UG23CS373
-SEC : G
+Name : N PARTHIV KUMAR<br>
+SRN : PES1UG23CS373<br>
+SEC : G<br>
 
 To enhance Python code quality, security, and style by utilizing static analysis tools (Pylint, Bandit, and Flake8) to detect and rectify common programming issues.
 
