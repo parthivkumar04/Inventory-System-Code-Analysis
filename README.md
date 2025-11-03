@@ -1,6 +1,7 @@
 # Lab 5 >>> Inventory System Static Code Analysis Report
 
-This document outlines the findings and comprehensive fixes applied to the original `inventory_system.py` file using Pylint, Bandit and Flake8, along with the required reflection's answers.
+To enhance Python code quality, security, and style by utilizing static analysis tools (Pylint, Bandit, and Flake8) to detect and rectify common programming issues.
+
 
 ## Issue Table
 
