@@ -1,6 +1,6 @@
 """
-A robust inventory management system to track stock, load/save data,
-and check for low-stock items using a class structure.
+A inventory management system to track stock, load/save data
+and check for low stock items using a class structure.
 """
 
 
@@ -9,10 +9,10 @@ from datetime import datetime
 
 
 class InventorySystem:
-    """Manages the stock, data loading, and reporting for items."""
+    """Manages the stock, data loading and reporting for items."""
 
     def __init__(self):
-        # stock_data is now an instance attribute, not a global variable.
+        # stock_data is now an instance attribute not a global variable.
         self.stock_data = {}
 
     def add_item(self, item="default", qty=0, logs=None):
@@ -97,3 +97,4 @@ def main():
 
 
 main()
+
