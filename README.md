@@ -19,7 +19,7 @@ To enhance Python code quality, security, and style by utilizing static analysis
 | **Global Statement** | Pylint (W0603) | 27 | Using the `global` statement makes data flow confusing. | **Refactored entire script** into an `InventorySystem` class, eliminating the need for `global`. |
 | ** Readability** | | | | |
 | **Non-snake_Case Name** | Pylint (C0103) | 8, 14, 22, 25, 31, 36, 41, 48 | Function names do not conform to PEP 8's `snake_case`. | Renamed all functions and methods to use `snake_case`. |
-| **Missing Docstrings** | Pylint (C0114, C0116) | 1, 8, 14, 22, 25, 31, 36, 41, 48 | Missing module docstring (line 1) and all 8 function docstrings. | Added concise docstrings to the module, class, and every method. |
+| **Missing Docstrings** | Pylint (C0114, C0116) | 1, 8, 14, 22, 25, 31, 36, 41, 48 | Missing module docstring (line 1) and all 8 function docstrings. | Added concise docstrings to the module, class and every method. |
 | **Unused Import** | Pylint (W0611) / Flake8 (F401) | 2 | The `logging` module was imported but never used. | Removed the line `import logging`. |
 | **F-string Use** | Pylint (C0209) | 12 | Using old C-style `%` string formatting. | Replaced with modern, readable **f-strings**. |
 | **Spacing/Style** | Flake8 (E302, E305) | Various | Incorrect number of blank lines around definitions. | Adjusted spacing to enforce 2 blank lines between top-level definitions and 1 blank line between class methods. |
