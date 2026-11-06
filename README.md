@@ -1,4 +1,4 @@
-# Lab 5 >>> Inventory System Static Code Analysis Report
+# Inventory System Static Code Analysis Report
 
 Name : N PARTHIV KUMAR<br>
 SRN : PES1UG23CS373<br>
